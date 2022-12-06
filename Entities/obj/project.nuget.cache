@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aqAbpNigdT0sszsXrxs0BwxT74RlZzKTlcoNcGtigL1iLv1aOthCLoQPLOAYtwewrsobDxyQO38f1NLq4QfTNw==",
+  "dgSpecHash": "CHuUMziv/KoC7ln+UxbH/Vx0Lui5aH/ta4/8aAuZbHLzsvcdu/GV/sp98mf3NfZexo2V8Fh99WoPnJo4+wbn0g==",
   "success": true,
-  "projectFilePath": "D:\\c#\\OnlineStoreAPI\\Entities\\Entities.csproj",
+  "projectFilePath": "D:\\c#\\OnlineStoreAPI\\Entities\\Nullean.OnlineStore.Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore", "OnlineStore\OnlineStore.csproj", "{81BBAB65-6B40-4861-8FC8-2A81D4CA9008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.OnlineStore", "OnlineStore\Nullean.OnlineStore.OnlineStore.csproj", "{81BBAB65-6B40-4861-8FC8-2A81D4CA9008}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nullean.OnlineStore.PL", "Nullean.OnlineStore.PL", "{A63A3E1D-F991-490C-A429-35403831B6F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nullean.OnlineStore.BLL", "Nullean.OnlineStore.BLL", "{6D40C83D-8891-472D-8138-79DEFE461C03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nullean.OnlineStore.DAL", "Nullean.OnlineStore.DAL", "{D68BA3F4-100D-4CFC-882C-0200EA8E2F26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nullean.OnlineStore.Common", "Nullean.OnlineStore.Common", "{EEA0606C-FC44-4975-BB01-9E49F7C920F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.Entities", "Entities\Nullean.OnlineStore.Entities.csproj", "{CD2AB723-57C4-45E7-B0F3-560D01173D61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.BllInterfaceUsers", "BLLInterface\Nullean.OnlineStore.BllInterfaceUsers.csproj", "{D9C4297C-8DB8-4214-AA68-2A825619BF8B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.BllInterfaceProducts", "Nullean.OnlineStore.BllInterfaceProducts\Nullean.OnlineStore.BllInterfaceProducts.csproj", "{0C5DDA0A-9A06-4C88-B6E0-7E6B16EF56CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.DalInterfaceUsers", "Nullean.OnlineStore.DalInterfaceUsers\Nullean.OnlineStore.DalInterfaceUsers.csproj", "{C1DAB8B4-4D26-4D34-AA20-7A186A63FAAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.DalInterfaceProducts", "Nullean.OnlineStore.DalInterfaceProducts\Nullean.OnlineStore.DalInterfaceProducts.csproj", "{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +33,37 @@ Global
 		{81BBAB65-6B40-4861-8FC8-2A81D4CA9008}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81BBAB65-6B40-4861-8FC8-2A81D4CA9008}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81BBAB65-6B40-4861-8FC8-2A81D4CA9008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2AB723-57C4-45E7-B0F3-560D01173D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2AB723-57C4-45E7-B0F3-560D01173D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2AB723-57C4-45E7-B0F3-560D01173D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2AB723-57C4-45E7-B0F3-560D01173D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C4297C-8DB8-4214-AA68-2A825619BF8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C4297C-8DB8-4214-AA68-2A825619BF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C4297C-8DB8-4214-AA68-2A825619BF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C4297C-8DB8-4214-AA68-2A825619BF8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5DDA0A-9A06-4C88-B6E0-7E6B16EF56CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5DDA0A-9A06-4C88-B6E0-7E6B16EF56CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5DDA0A-9A06-4C88-B6E0-7E6B16EF56CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5DDA0A-9A06-4C88-B6E0-7E6B16EF56CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1DAB8B4-4D26-4D34-AA20-7A186A63FAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1DAB8B4-4D26-4D34-AA20-7A186A63FAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1DAB8B4-4D26-4D34-AA20-7A186A63FAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1DAB8B4-4D26-4D34-AA20-7A186A63FAAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{81BBAB65-6B40-4861-8FC8-2A81D4CA9008} = {A63A3E1D-F991-490C-A429-35403831B6F8}
+		{CD2AB723-57C4-45E7-B0F3-560D01173D61} = {EEA0606C-FC44-4975-BB01-9E49F7C920F0}
+		{D9C4297C-8DB8-4214-AA68-2A825619BF8B} = {6D40C83D-8891-472D-8138-79DEFE461C03}
+		{0C5DDA0A-9A06-4C88-B6E0-7E6B16EF56CD} = {6D40C83D-8891-472D-8138-79DEFE461C03}
+		{C1DAB8B4-4D26-4D34-AA20-7A186A63FAAD} = {D68BA3F4-100D-4CFC-882C-0200EA8E2F26}
+		{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849} = {D68BA3F4-100D-4CFC-882C-0200EA8E2F26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E360156-7EDF-4FE7-893F-91EAC83F8403}

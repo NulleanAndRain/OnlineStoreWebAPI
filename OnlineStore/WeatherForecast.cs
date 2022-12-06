@@ -1,4 +1,4 @@
-namespace OnlineStore
+namespace Nullean.OnlineStore.PL
 {
     public class WeatherForecast
     {

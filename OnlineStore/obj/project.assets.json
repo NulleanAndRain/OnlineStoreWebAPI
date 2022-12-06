@@ -88,6 +88,68 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Nullean.OnlineStore.BllInterfaceProducts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Nullean.OnlineStore.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nullean.OnlineStore.BllInterfaceProducts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nullean.OnlineStore.BllInterfaceProducts.dll": {}
+        }
+      },
+      "Nullean.OnlineStore.BllInterfaceUsers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Nullean.OnlineStore.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nullean.OnlineStore.BllInterfaceUsers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nullean.OnlineStore.BllInterfaceUsers.dll": {}
+        }
+      },
+      "Nullean.OnlineStore.DalInterfaceProducts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Nullean.OnlineStore.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nullean.OnlineStore.DalInterfaceProducts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nullean.OnlineStore.DalInterfaceProducts.dll": {}
+        }
+      },
+      "Nullean.OnlineStore.DalInterfaceUsers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Nullean.OnlineStore.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nullean.OnlineStore.DalInterfaceUsers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nullean.OnlineStore.DalInterfaceUsers.dll": {}
+        }
+      },
+      "Nullean.OnlineStore.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Nullean.OnlineStore.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nullean.OnlineStore.Entities.dll": {}
+        }
       }
     }
   },
@@ -216,10 +278,40 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Nullean.OnlineStore.BllInterfaceProducts/1.0.0": {
+      "type": "project",
+      "path": "../Nullean.OnlineStore.BllInterfaceProducts/Nullean.OnlineStore.BllInterfaceProducts.csproj",
+      "msbuildProject": "../Nullean.OnlineStore.BllInterfaceProducts/Nullean.OnlineStore.BllInterfaceProducts.csproj"
+    },
+    "Nullean.OnlineStore.BllInterfaceUsers/1.0.0": {
+      "type": "project",
+      "path": "../BLLInterface/Nullean.OnlineStore.BllInterfaceUsers.csproj",
+      "msbuildProject": "../BLLInterface/Nullean.OnlineStore.BllInterfaceUsers.csproj"
+    },
+    "Nullean.OnlineStore.DalInterfaceProducts/1.0.0": {
+      "type": "project",
+      "path": "../Nullean.OnlineStore.DalInterfaceProducts/Nullean.OnlineStore.DalInterfaceProducts.csproj",
+      "msbuildProject": "../Nullean.OnlineStore.DalInterfaceProducts/Nullean.OnlineStore.DalInterfaceProducts.csproj"
+    },
+    "Nullean.OnlineStore.DalInterfaceUsers/1.0.0": {
+      "type": "project",
+      "path": "../Nullean.OnlineStore.DalInterfaceUsers/Nullean.OnlineStore.DalInterfaceUsers.csproj",
+      "msbuildProject": "../Nullean.OnlineStore.DalInterfaceUsers/Nullean.OnlineStore.DalInterfaceUsers.csproj"
+    },
+    "Nullean.OnlineStore.Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Nullean.OnlineStore.Entities.csproj",
+      "msbuildProject": "../Entities/Nullean.OnlineStore.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Nullean.OnlineStore.BllInterfaceProducts >= 1.0.0",
+      "Nullean.OnlineStore.BllInterfaceUsers >= 1.0.0",
+      "Nullean.OnlineStore.DalInterfaceProducts >= 1.0.0",
+      "Nullean.OnlineStore.DalInterfaceUsers >= 1.0.0",
+      "Nullean.OnlineStore.Entities >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -230,9 +322,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#\\OnlineStoreAPI\\OnlineStore\\OnlineStore.csproj",
-      "projectName": "OnlineStore",
-      "projectPath": "D:\\c#\\OnlineStoreAPI\\OnlineStore\\OnlineStore.csproj",
+      "projectUniqueName": "D:\\c#\\OnlineStoreAPI\\OnlineStore\\Nullean.OnlineStore.OnlineStore.csproj",
+      "projectName": "Nullean.OnlineStore.OnlineStore",
+      "projectPath": "D:\\c#\\OnlineStoreAPI\\OnlineStore\\Nullean.OnlineStore.OnlineStore.csproj",
       "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
       "outputPath": "D:\\c#\\OnlineStoreAPI\\OnlineStore\\obj\\",
       "projectStyle": "PackageReference",
@@ -255,7 +347,23 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\c#\\OnlineStoreAPI\\BLLInterface\\Nullean.OnlineStore.BllInterfaceUsers.csproj": {
+              "projectPath": "D:\\c#\\OnlineStoreAPI\\BLLInterface\\Nullean.OnlineStore.BllInterfaceUsers.csproj"
+            },
+            "D:\\c#\\OnlineStoreAPI\\Entities\\Nullean.OnlineStore.Entities.csproj": {
+              "projectPath": "D:\\c#\\OnlineStoreAPI\\Entities\\Nullean.OnlineStore.Entities.csproj"
+            },
+            "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.BllInterfaceProducts\\Nullean.OnlineStore.BllInterfaceProducts.csproj": {
+              "projectPath": "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.BllInterfaceProducts\\Nullean.OnlineStore.BllInterfaceProducts.csproj"
+            },
+            "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.DalInterfaceProducts\\Nullean.OnlineStore.DalInterfaceProducts.csproj": {
+              "projectPath": "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.DalInterfaceProducts\\Nullean.OnlineStore.DalInterfaceProducts.csproj"
+            },
+            "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.DalInterfaceUsers\\Nullean.OnlineStore.DalInterfaceUsers.csproj": {
+              "projectPath": "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.DalInterfaceUsers\\Nullean.OnlineStore.DalInterfaceUsers.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

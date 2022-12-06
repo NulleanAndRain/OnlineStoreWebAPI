@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#\\OnlineStoreAPI\\Entities\\Entities.csproj",
-      "projectName": "Entities",
-      "projectPath": "D:\\c#\\OnlineStoreAPI\\Entities\\Entities.csproj",
+      "projectUniqueName": "D:\\c#\\OnlineStoreAPI\\Entities\\Nullean.OnlineStore.Entities.csproj",
+      "projectName": "Nullean.OnlineStore.Entities",
+      "projectPath": "D:\\c#\\OnlineStoreAPI\\Entities\\Nullean.OnlineStore.Entities.csproj",
       "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
       "outputPath": "D:\\c#\\OnlineStoreAPI\\Entities\\obj\\",
       "projectStyle": "PackageReference",
