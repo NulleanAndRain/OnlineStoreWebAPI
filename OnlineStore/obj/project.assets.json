@@ -1214,6 +1214,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Nullean.OnlineStore.DalInterfaceProducts": "1.0.0",
+          "Nullean.OnlineStore.EFContext": "1.0.0",
           "Nullean.OnlineStore.Entities": "1.0.0"
         },
         "compile": {

@@ -2,8 +2,9 @@
 {
     public class Order
     {
-        public Guid GuidId { get; set; }
+        public Guid Id { get; set; }
         public decimal TotalPrice { get; set; }
         public int TotalCount { get; set; }
+        public IEnumerable<Product> Products { get; set; }
     }
 }
