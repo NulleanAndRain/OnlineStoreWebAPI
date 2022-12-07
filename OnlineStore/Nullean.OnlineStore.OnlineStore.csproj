@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +18,9 @@
     <ProjectReference Include="..\Nullean.OnlineStore.BllInterfaceProducts\Nullean.OnlineStore.BllInterfaceProducts.csproj" />
     <ProjectReference Include="..\Nullean.OnlineStore.DalInterfaceProducts\Nullean.OnlineStore.DalInterfaceProducts.csproj" />
     <ProjectReference Include="..\Nullean.OnlineStore.DalInterfaceUsers\Nullean.OnlineStore.DalInterfaceUsers.csproj" />
+    <ProjectReference Include="..\Nullean.OnlineStore.EFContext\Nullean.OnlineStore.EFContext.csproj" />
+    <ProjectReference Include="..\Nullean.OnlineStore.ProductsDaoEF\Nullean.OnlineStore.ProductsDaoEF.csproj" />
+    <ProjectReference Include="..\Nullean.OnlineStore.UserDaoEF\Nullean.OnlineStore.UserDaoEF.csproj" />
   </ItemGroup>
 
 </Project>

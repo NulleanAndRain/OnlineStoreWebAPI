@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Nullean.OnlineStore.DalInterfaceProducts
 {
-    internal interface IOrderDao
+    public interface IProductsDao
     {
         public Task<Response<IEnumerable<Order>>> GetUserOrders(Guid id);
     }

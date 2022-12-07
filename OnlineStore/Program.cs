@@ -1,6 +1,21 @@
+using Microsoft.EntityFrameworkCore;
+using Nullean.OnlineStore.DalInterfaceProducts;
+using Nullean.OnlineStore.DalInterfaceUsers;
+using Nullean.OnlineStore.EFContext;
+using Nullean.OnlineStore.ProductsDaoEF;
+using Nullean.OnlineStore.UserDaoEF;
+
 var builder = WebApplication.CreateBuilder(args);
 
+const string dbName = "Nullean.OnlineStore.DB";
 // Add services to the container.
+builder.Services.AddDbContext<AppDbContext>(cfg =>
+{
+    cfg.UseSqlServer(dbName);
+});
+
+builder.Services.AddScoped<IProductsDao, ProductsDaoEF>();
+builder.Services.AddScoped<IUserDao, UserDaoEF>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

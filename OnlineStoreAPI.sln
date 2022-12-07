@@ -19,13 +19,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.BllInte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.BllInterfaceProducts", "Nullean.OnlineStore.BllInterfaceProducts\Nullean.OnlineStore.BllInterfaceProducts.csproj", "{0C5DDA0A-9A06-4C88-B6E0-7E6B16EF56CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.DalInterfaceUsers", "Nullean.OnlineStore.DalInterfaceUsers\Nullean.OnlineStore.DalInterfaceUsers.csproj", "{C1DAB8B4-4D26-4D34-AA20-7A186A63FAAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.DalInterfaceUsers", "Nullean.OnlineStore.DalInterfaceUsers\Nullean.OnlineStore.DalInterfaceUsers.csproj", "{C1DAB8B4-4D26-4D34-AA20-7A186A63FAAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.DalInterfaceProducts", "Nullean.OnlineStore.DalInterfaceProducts\Nullean.OnlineStore.DalInterfaceProducts.csproj", "{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.DalInterfaceProducts", "Nullean.OnlineStore.DalInterfaceProducts\Nullean.OnlineStore.DalInterfaceProducts.csproj", "{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.UserDaoEF", "Nullean.OnlineStore.UserDaoEF\Nullean.OnlineStore.UserDaoEF.csproj", "{568366DA-1DEB-44F1-8466-BB1D9DD35EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.UserDaoEF", "Nullean.OnlineStore.UserDaoEF\Nullean.OnlineStore.UserDaoEF.csproj", "{568366DA-1DEB-44F1-8466-BB1D9DD35EDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.ProductsDaoEF", "Nullean.OnlineStore.ProductsDaoEF\Nullean.OnlineStore.ProductsDaoEF.csproj", "{2649EFDE-F135-4548-8DB8-1559544BAE1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.ProductsDaoEF", "Nullean.OnlineStore.ProductsDaoEF\Nullean.OnlineStore.ProductsDaoEF.csproj", "{2649EFDE-F135-4548-8DB8-1559544BAE1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.EFContext", "Nullean.OnlineStore.EFContext\Nullean.OnlineStore.EFContext.csproj", "{AF9E9B5B-03C0-4646-B109-A4D7B8EA5E8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{2649EFDE-F135-4548-8DB8-1559544BAE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2649EFDE-F135-4548-8DB8-1559544BAE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2649EFDE-F135-4548-8DB8-1559544BAE1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9E9B5B-03C0-4646-B109-A4D7B8EA5E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9E9B5B-03C0-4646-B109-A4D7B8EA5E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9E9B5B-03C0-4646-B109-A4D7B8EA5E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9E9B5B-03C0-4646-B109-A4D7B8EA5E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{C9781AC8-2EEA-4D0E-A220-DFC9D09DC849} = {D68BA3F4-100D-4CFC-882C-0200EA8E2F26}
 		{568366DA-1DEB-44F1-8466-BB1D9DD35EDB} = {D68BA3F4-100D-4CFC-882C-0200EA8E2F26}
 		{2649EFDE-F135-4548-8DB8-1559544BAE1F} = {D68BA3F4-100D-4CFC-882C-0200EA8E2F26}
+		{AF9E9B5B-03C0-4646-B109-A4D7B8EA5E8A} = {D68BA3F4-100D-4CFC-882C-0200EA8E2F26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E360156-7EDF-4FE7-893F-91EAC83F8403}
