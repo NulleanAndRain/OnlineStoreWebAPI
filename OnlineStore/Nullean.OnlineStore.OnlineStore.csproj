@@ -10,4 +10,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BLLInterface\Nullean.OnlineStore.BllInterfaceUsers.csproj" />
+    <ProjectReference Include="..\Entities\Nullean.OnlineStore.Entities.csproj" />
+    <ProjectReference Include="..\Nullean.OnlineStore.BllInterfaceProducts\Nullean.OnlineStore.BllInterfaceProducts.csproj" />
+    <ProjectReference Include="..\Nullean.OnlineStore.DalInterfaceProducts\Nullean.OnlineStore.DalInterfaceProducts.csproj" />
+    <ProjectReference Include="..\Nullean.OnlineStore.DalInterfaceUsers\Nullean.OnlineStore.DalInterfaceUsers.csproj" />
+  </ItemGroup>
+
 </Project>

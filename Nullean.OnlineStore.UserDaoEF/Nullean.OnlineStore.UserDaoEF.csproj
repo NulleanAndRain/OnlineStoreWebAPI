@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Nullean.OnlineStore.Entities.csproj" />
+    <ProjectReference Include="..\Nullean.OnlineStore.DalInterfaceUsers\Nullean.OnlineStore.DalInterfaceUsers.csproj" />
+  </ItemGroup>
+
 </Project>
