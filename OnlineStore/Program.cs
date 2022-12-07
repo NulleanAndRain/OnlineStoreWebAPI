@@ -7,11 +7,10 @@ using Nullean.OnlineStore.UserDaoEF;
 
 var builder = WebApplication.CreateBuilder(args);
 
-const string dbName = "Nullean.OnlineStore.DB";
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(cfg =>
 {
-    cfg.UseSqlServer(dbName);
+    cfg.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 builder.Services.AddScoped<IProductsDao, ProductsDaoEF>();

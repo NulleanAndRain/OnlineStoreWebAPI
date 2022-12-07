@@ -23,4 +23,10 @@
     <ProjectReference Include="..\Nullean.OnlineStore.UserDaoEF\Nullean.OnlineStore.UserDaoEF.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
 </Project>

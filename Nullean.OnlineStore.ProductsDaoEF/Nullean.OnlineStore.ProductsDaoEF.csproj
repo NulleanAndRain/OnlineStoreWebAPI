@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Entities\Nullean.OnlineStore.Entities.csproj" />
     <ProjectReference Include="..\Nullean.OnlineStore.DalInterfaceProducts\Nullean.OnlineStore.DalInterfaceProducts.csproj" />
+    <ProjectReference Include="..\Nullean.OnlineStore.EFContext\Nullean.OnlineStore.EFContext.csproj" />
   </ItemGroup>
 
 </Project>
