@@ -11,21 +11,26 @@ namespace Nullean.OnlineStore.UserDaoEF
 {
     public class UserDaoEF : IUserDao
     {
+        private readonly AppDbContext _ctx;
+
+        public UserDaoEF(AppDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+
         public async Task<Response> CreateUser(UserModel user)
         {
             var response = new Response();
             try
             {
-                using var ctx = new AppDbContext();
                 var u = new UserModel
                 {
                     Id = user.Id,
-                    Orders = new List<OrderModel>(),
                     Username = user.Username,
                     Password = user.Password
                 };
-                await ctx.AddAsync(u);
-                await ctx.SaveChangesAsync();
+                await _ctx.AddAsync(u);
+                await _ctx.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -45,8 +50,7 @@ namespace Nullean.OnlineStore.UserDaoEF
             var response = new Response<UserModel>();
             try
             {
-                using var ctx = new AppDbContext();
-                var user = await ctx.Users
+                var user = await _ctx.Users
                     .Where(u => u.Username == username)
                     .Select(u => new UserModel
                     {
@@ -75,8 +79,7 @@ namespace Nullean.OnlineStore.UserDaoEF
             var response = new Response<UserDetailed>();
             try
             {
-                using var ctx = new AppDbContext();
-                var user = await ctx.Users
+                var user = await _ctx.Users
                     .Include(u => u.Orders)
                     .Include(u => u.Orders.Select(o => o.Products))
                     .Where(u => u.UserId == Id)

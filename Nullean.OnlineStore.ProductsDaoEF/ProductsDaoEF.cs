@@ -10,13 +10,19 @@ namespace Nullean.OnlineStore.ProductsDaoEF
 {
     public class ProductsDaoEF : IProductsDao
     {
+        private readonly AppDbContext _ctx;
+
+        public ProductsDaoEF(AppDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+
         public async Task<Response<IEnumerable<Order>>> GetUserOrders(Guid id)
         {
             var response = new Response<IEnumerable<Order>>();
             try
             {
-                using var ctx = new AppDbContext();
-                var orders = ctx.Orders
+                var orders = _ctx.Orders
                     .Include(o => o.Products)
                     .Where(o => o.UserId == id)
                     .Select(o => new OrderModel
