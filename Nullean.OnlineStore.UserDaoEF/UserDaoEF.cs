@@ -7,6 +7,8 @@ using UserModel = Nullean.OnlineStore.Entities.User;
 using OrderModel = Nullean.OnlineStore.Entities.Order;
 using ProductModel = Nullean.OnlineStore.Entities.Product;
 
+using UserEF = Nullean.OnlineStore.EFContext.EfEntities.User;
+
 namespace Nullean.OnlineStore.UserDaoEF
 {
     public class UserDaoEF : IUserDao
@@ -23,11 +25,12 @@ namespace Nullean.OnlineStore.UserDaoEF
             var response = new Response();
             try
             {
-                var u = new UserModel
+                var u = new UserEF
                 {
-                    Id = user.Id,
+                    UserId = user.Id,
                     Username = user.Username,
-                    Password = user.Password
+                    Password = user.Password,
+                    Role = user.Role
                 };
                 await _ctx.AddAsync(u);
                 await _ctx.SaveChangesAsync();
@@ -56,7 +59,8 @@ namespace Nullean.OnlineStore.UserDaoEF
                     {
                         Id = u.UserId,
                         Username = u.Username,
-                        Password = u.Password
+                        Password = u.Password,
+                        Role = u.Role
                     })
                     .FirstOrDefaultAsync();
                 response.ResponseBody = user;
@@ -80,8 +84,8 @@ namespace Nullean.OnlineStore.UserDaoEF
             try
             {
                 var user = await _ctx.Users
-                    .Include(u => u.Orders)
-                    .Include(u => u.Orders.Select(o => o.Products))
+                    //.Include(u => u.Orders)
+                    //.Include(u => u.Orders.Select(o => o.Products))
                     .Where(u => u.UserId == Id)
                     .Select(u => new UserDetailed
                     {

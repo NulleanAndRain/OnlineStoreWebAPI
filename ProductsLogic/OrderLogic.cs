@@ -2,7 +2,7 @@
 using Nullean.OnlineStore.DalInterfaceProducts;
 using Nullean.OnlineStore.Entities;
 
-namespace ProductsLogic
+namespace Nullean.OnlineStore.OnlineStore.ProductsLogic
 {
     public class OrderLogic : IOrderBll
     {
@@ -11,6 +11,39 @@ namespace ProductsLogic
         public OrderLogic(IProductsDao dao)
         {
             _dao = dao;
+        }
+
+        public async Task<Response> AddOrder(Order order, Guid userId)
+        {
+            var response = new Response();
+            try
+            {
+                order.Id = Guid.NewGuid();
+                var res = await _dao.AddOrder(order, userId);
+                if (res.Errors?.Any() ?? false)
+                {
+                    response.Errors = res.Errors;
+                }
+            }
+            catch (Exception ex)
+            {
+                var e = new Error
+                {
+                    Message = ex.Message
+                };
+                if (response.Errors?.Any() ?? false)
+                {
+                    response.Errors.Add(e);
+                }
+                else
+                {
+                    response.Errors = new List<Error>
+                    {
+                        e
+                    };
+                }
+            }
+            return response;
         }
 
         public async Task<Response<IEnumerable<Order>>> GetUserOrders(Guid id)

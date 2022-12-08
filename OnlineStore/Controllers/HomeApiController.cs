@@ -10,52 +10,26 @@ using System.Security.Claims;
 namespace Nullean.OnlineStore.OnlineStore.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class HomeApiController : Controller
     {
         private readonly IUserBll _users;
         private readonly IOrderBll _orders;
 
         private const string USER_ID_FIELD = "user_id";
 
-        public HomeController(IUserBll users, IOrderBll orders)
+        public HomeApiController(IUserBll users, IOrderBll orders)
         {
             _users = users;
             _orders = orders;
         }
 
-        public async Task<IActionResult> Index()
-        {
-            var res = await _users.GetUserDetials(
-                Guid.Parse(User.Claims.SingleOrDefault(cl => cl.Type == USER_ID_FIELD).Value)
-            );
-
-            if (res.Errors?.Any() ?? false)
-            {
-                await LogOut();
-            }
-            var user = res.ResponseBody;
-
-            if (user == null)
-            {
-                await LogOut();
-                return Redirect("/Home/LogIn");
-            }
-
-            var model = new UserModel
-            {
-                Id = user.Id,
-                Username = user.Username,
-                Orders = user.Orders,
-            };
-            return View(model);
-        }
-
+        [HttpGet("/GetUserInfo")]
         [Authorize(Policy = Constants.RoleNames.Admin)]
-        public async Task<IActionResult> Admin()
+        public async Task<Response<UserModel>> GetUserInfo([FromHeader] Guid id)
         {
-            var res = await _users.GetUserDetials(
-                Guid.Parse(User.Claims.SingleOrDefault(cl => cl.Type == USER_ID_FIELD).Value)
-            );
+            var res = await _users.GetUserDetials(id);
 
             if (res.Errors?.Any() ?? false)
             {
@@ -63,47 +37,62 @@ namespace Nullean.OnlineStore.OnlineStore.Controllers
             }
             var user = res.ResponseBody;
 
-            if (user == null)
+            UserModel model = null;
+            if (user != null)
             {
-                await LogOut();
-                return Redirect("/Home/LogIn");
+                model = new UserModel
+                {
+                    Id = user.Id,
+                    Username = user.Username,
+                    Orders = user.Orders,
+                };
             }
 
-            var model = new UserModelDetailed
+            return new Response<UserModel>
             {
-                Id = user.Id,
-                Username = user.Username,
-                Orders = user.Orders,
-                OrdersCount = user.TotalOrdersCount,
-                OrdersTotalPrice = user.TotalOrdersPrice
+                Errors = res.Errors,
+                ResponseBody = model
             };
-            return View(model);
         }
 
-        [AllowAnonymous]
-        public IActionResult LogIn(LogInModel model, string returnUrl)
+        [HttpGet("/GetFullUserInfo")]
+        [Authorize(Policy = Constants.RoleNames.Admin)]
+        public async Task<Response<UserModelDetailed>> GetFullUserInfo([FromHeader]Guid id)
         {
-            model.ReturnUrl = returnUrl;
-            return View(model);
-        }
-
-        [AllowAnonymous]
-        [HttpPost]
-        public async Task<IActionResult> LogIn(LogInModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-
-            var res = await _users.LoginUser(model.Username, model.Password);
+            var res = await _users.GetUserDetials(id);
 
             if (res.Errors?.Any() ?? false)
             {
-                foreach (var e in res.Errors)
-                    ModelState.AddModelError("", e.Message);
-                return View(model);
+                await LogOut();
             }
+            var user = res.ResponseBody;
+
+            UserModelDetailed model = null;
+            if (user != null)
+            {
+                model = new UserModelDetailed
+                {
+                    Id = user.Id,
+                    Username = user.Username,
+                    Orders = user.Orders,
+                    OrdersCount = user.TotalOrdersCount,
+                    OrdersTotalPrice = user.TotalOrdersPrice
+                };
+            }
+
+            return new Response<UserModelDetailed>
+            {
+                Errors = res.Errors,
+                ResponseBody = model
+            };
+        }
+
+        [AllowAnonymous]
+        [HttpPost("/LogIn")]
+        public async Task<Response<UserModel>> LogIn([FromBody]LogInModel model)
+        {
+            var response = new Response<UserModel>();
+            var res = await _users.LoginUser(model.Username, model.Password);
 
             var user = res.ResponseBody;
 
@@ -117,24 +106,20 @@ namespace Nullean.OnlineStore.OnlineStore.Controllers
             var claimPrincipal = new ClaimsPrincipal(claimIdentity);
             await HttpContext.SignInAsync("Cookie", claimPrincipal);
 
-            return Redirect(model.ReturnUrl ?? "/");
-        }
-
-        [AllowAnonymous]
-        public IActionResult SignUp(string returnUrl)
-        {
-            return View();
-        }
-
-        [AllowAnonymous]
-        [HttpPost]
-        public async Task<IActionResult> SignUp(SignUpModel model)
-        {
-            if (!ModelState.IsValid)
+            response.Errors = res.Errors;
+            response.ResponseBody = new UserModel
             {
-                return View(model);
-            }
+                Id = user.Id,
+                Username = user.Username,
+            };
 
+            return response;
+        }
+
+        [AllowAnonymous]
+        [HttpPost("/SignUp")]
+        public async Task<Response> SignUp([FromBody]SignUpModel model)
+        {
             var res = await _users.CreateUser(new User
             {
                 Username = model.Username,
@@ -142,23 +127,16 @@ namespace Nullean.OnlineStore.OnlineStore.Controllers
                 Role = Constants.RoleNames.User,
             });
 
-            if (res.Errors?.Any() ?? false)
-            {
-                foreach (var e in res.Errors)
-                    ModelState.AddModelError("", e.Message);
-                return View(model);
-            }
-
-            return Redirect(model.ReturnUrl ?? "/");
+            return res;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> LogOut()
+        [HttpPost("/LogOut")]
+        public async Task LogOut()
         {
             await HttpContext.SignOutAsync("Cookie");
-            return Redirect("/");
         }
 
+        [HttpPost("/AddTestOrder")]
         public async Task<IActionResult> AddTestOrder()
         {
             var userId = Guid.Parse(User.Claims.SingleOrDefault(cl => cl.Type == USER_ID_FIELD).Value);

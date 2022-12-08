@@ -1,13 +1,17 @@
 ﻿@using Nullean.OnlineStore.OnlineStore.Controllers;
 @using Nullean.OnlineStore.OnlineStore.Models;
-@model UserModel
+@model UserModelDetailed
 
 
 <h2>Hello, @Model.Username</h2>
-<a asp-action="LogOut">log out</a>
+<a asp-action="LogOut">log out</a> <a asp-action="Index">Go to default page</a>
 <h1>Your orders:</h1>
 <a asp-action="AddTestOrder">Add test order</a>
 <div asp-validation-summary="All"></div>
+
+<span> Orders count: @Model.OrdersCount</span><br />
+<span> Total orders price: @Model.OrdersTotalPrice</span><br />
+
 @foreach (var order in Model.Orders) 
 {
     <table>
@@ -39,3 +43,5 @@
     </table>
     <br />
 }
+
+<a href="/swagger">Swagger</a>

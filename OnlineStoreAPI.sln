@@ -29,9 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.Product
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.EFContext", "Nullean.OnlineStore.EFContext\Nullean.OnlineStore.EFContext.csproj", "{AF9E9B5B-03C0-4646-B109-A4D7B8EA5E8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.UsersLogic", "UsersLogic\Nullean.OnlineStore.UsersLogic.csproj", "{4C97D840-DCDE-4B11-9594-A1339D528C2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.UsersLogic", "UsersLogic\Nullean.OnlineStore.UsersLogic.csproj", "{4C97D840-DCDE-4B11-9594-A1339D528C2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullean.OnlineStore.ProductsLogic", "ProductsLogic\Nullean.OnlineStore.ProductsLogic.csproj", "{D7268A98-9875-49EF-A1AB-B828F83C1D56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullean.OnlineStore.ProductsLogic", "ProductsLogic\Nullean.OnlineStore.ProductsLogic.csproj", "{D7268A98-9875-49EF-A1AB-B828F83C1D56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

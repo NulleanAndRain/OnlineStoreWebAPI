@@ -1,0 +1,23 @@
+﻿@using Nullean.OnlineStore.OnlineStore.Models;
+@model LogInModel
+
+<h1>Log in</h1>
+<form asp-controller="Home" asp-action="LogIn" method="post">
+    <input asp-for="ReturnUrl" hidden />
+    <p>
+        <label>Username</label><br />
+        <input type="text" asp-for="Username" placeholder="Username"/>   
+    </p>
+    <p>
+        <label>Password</label><br />
+        <input type="password" asp-for="Password" placeholder="Password" />
+    </p>
+    <p>
+        <div asp-validation-summary="All"></div>
+    </p>
+    <p>
+        <input type="submit" value="Log in">
+    </p>
+</form>
+<br />
+<a asp-controller="Home" asp-action="SignUp">Sign up</a>
