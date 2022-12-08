@@ -22,6 +22,7 @@
     <ProjectReference Include="..\Nullean.OnlineStore.EFContext\Nullean.OnlineStore.EFContext.csproj" />
     <ProjectReference Include="..\Nullean.OnlineStore.ProductsDaoEF\Nullean.OnlineStore.ProductsDaoEF.csproj" />
     <ProjectReference Include="..\Nullean.OnlineStore.UserDaoEF\Nullean.OnlineStore.UserDaoEF.csproj" />
+    <ProjectReference Include="..\ProductsLogic\Nullean.OnlineStore.ProductsLogic.csproj" />
     <ProjectReference Include="..\UsersLogic\Nullean.OnlineStore.UsersLogic.csproj" />
   </ItemGroup>
 

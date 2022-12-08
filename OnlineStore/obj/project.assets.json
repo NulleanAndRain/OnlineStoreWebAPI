@@ -3742,6 +3742,20 @@
           "bin/placeholder/Nullean.OnlineStore.ProductsDaoEF.dll": {}
         }
       },
+      "Nullean.OnlineStore.ProductsLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Nullean.OnlineStore.BllInterfaceProducts": "1.0.0",
+          "Nullean.OnlineStore.DalInterfaceProducts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nullean.OnlineStore.ProductsLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nullean.OnlineStore.ProductsLogic.dll": {}
+        }
+      },
       "Nullean.OnlineStore.UserDaoEF/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -10735,6 +10749,11 @@
       "path": "../Nullean.OnlineStore.ProductsDaoEF/Nullean.OnlineStore.ProductsDaoEF.csproj",
       "msbuildProject": "../Nullean.OnlineStore.ProductsDaoEF/Nullean.OnlineStore.ProductsDaoEF.csproj"
     },
+    "Nullean.OnlineStore.ProductsLogic/1.0.0": {
+      "type": "project",
+      "path": "../ProductsLogic/Nullean.OnlineStore.ProductsLogic.csproj",
+      "msbuildProject": "../ProductsLogic/Nullean.OnlineStore.ProductsLogic.csproj"
+    },
     "Nullean.OnlineStore.UserDaoEF/1.0.0": {
       "type": "project",
       "path": "../Nullean.OnlineStore.UserDaoEF/Nullean.OnlineStore.UserDaoEF.csproj",
@@ -10758,6 +10777,7 @@
       "Nullean.OnlineStore.EFContext >= 1.0.0",
       "Nullean.OnlineStore.Entities >= 1.0.0",
       "Nullean.OnlineStore.ProductsDaoEF >= 1.0.0",
+      "Nullean.OnlineStore.ProductsLogic >= 1.0.0",
       "Nullean.OnlineStore.UserDaoEF >= 1.0.0",
       "Nullean.OnlineStore.UsersLogic >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -10819,6 +10839,9 @@
             },
             "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.UserDaoEF\\Nullean.OnlineStore.UserDaoEF.csproj": {
               "projectPath": "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.UserDaoEF\\Nullean.OnlineStore.UserDaoEF.csproj"
+            },
+            "D:\\c#\\OnlineStoreAPI\\ProductsLogic\\Nullean.OnlineStore.ProductsLogic.csproj": {
+              "projectPath": "D:\\c#\\OnlineStoreAPI\\ProductsLogic\\Nullean.OnlineStore.ProductsLogic.csproj"
             },
             "D:\\c#\\OnlineStoreAPI\\UsersLogic\\Nullean.OnlineStore.UsersLogic.csproj": {
               "projectPath": "D:\\c#\\OnlineStoreAPI\\UsersLogic\\Nullean.OnlineStore.UsersLogic.csproj"
