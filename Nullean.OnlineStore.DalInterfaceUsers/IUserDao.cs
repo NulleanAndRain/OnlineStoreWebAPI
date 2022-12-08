@@ -4,10 +4,8 @@ namespace Nullean.OnlineStore.DalInterfaceUsers
 {
     public interface IUserDao
     {
-        public Task<Response> LoginUser(string username, string password);
-
+        public Task<Response<User>> GetUserByName(string username);
         public Task<Response> CreateUser(User user);
-
-        public Task<Response<UserDetailed>> GetUserDetials(string username);
+        public Task<Response<UserDetailed>> GetUserDetials(Guid Id);
     }
 }
