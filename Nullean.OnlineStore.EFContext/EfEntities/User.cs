@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Nullean.OnlineStore.EFContext.EfEntities
 {
+    [Index(nameof(Username), IsUnique = true)]
     public class User
     {
         public Guid UserId { get; set; }

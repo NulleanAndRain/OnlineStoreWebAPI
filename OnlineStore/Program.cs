@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Nullean.OnlineStore.BllInterfaceUsers;
 using Nullean.OnlineStore.DalInterfaceProducts;
 using Nullean.OnlineStore.DalInterfaceUsers;
 using Nullean.OnlineStore.EFContext;
 using Nullean.OnlineStore.ProductsDaoEF;
 using Nullean.OnlineStore.UserDaoEF;
+using Nullean.OnlineStore.UsersLogic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,8 @@ builder.Services.AddDbContext<AppDbContext>(cfg =>
 
 builder.Services.AddScoped<IProductsDao, ProductsDaoEF>();
 builder.Services.AddScoped<IUserDao, UserDaoEF>();
+
+builder.Services.AddScoped<IUserBll, UserLogic>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

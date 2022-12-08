@@ -1238,6 +1238,20 @@
         "runtime": {
           "bin/placeholder/Nullean.OnlineStore.UserDaoEF.dll": {}
         }
+      },
+      "Nullean.OnlineStore.UsersLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Nullean.OnlineStore.BllInterfaceUsers": "1.0.0",
+          "Nullean.OnlineStore.DalInterfaceUsers": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nullean.OnlineStore.UsersLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nullean.OnlineStore.UsersLogic.dll": {}
+        }
       }
     }
   },
@@ -3776,6 +3790,11 @@
       "type": "project",
       "path": "../Nullean.OnlineStore.UserDaoEF/Nullean.OnlineStore.UserDaoEF.csproj",
       "msbuildProject": "../Nullean.OnlineStore.UserDaoEF/Nullean.OnlineStore.UserDaoEF.csproj"
+    },
+    "Nullean.OnlineStore.UsersLogic/1.0.0": {
+      "type": "project",
+      "path": "../UsersLogic/Nullean.OnlineStore.UsersLogic.csproj",
+      "msbuildProject": "../UsersLogic/Nullean.OnlineStore.UsersLogic.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3790,6 +3809,7 @@
       "Nullean.OnlineStore.Entities >= 1.0.0",
       "Nullean.OnlineStore.ProductsDaoEF >= 1.0.0",
       "Nullean.OnlineStore.UserDaoEF >= 1.0.0",
+      "Nullean.OnlineStore.UsersLogic >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -3849,6 +3869,9 @@
             },
             "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.UserDaoEF\\Nullean.OnlineStore.UserDaoEF.csproj": {
               "projectPath": "D:\\c#\\OnlineStoreAPI\\Nullean.OnlineStore.UserDaoEF\\Nullean.OnlineStore.UserDaoEF.csproj"
+            },
+            "D:\\c#\\OnlineStoreAPI\\UsersLogic\\Nullean.OnlineStore.UsersLogic.csproj": {
+              "projectPath": "D:\\c#\\OnlineStoreAPI\\UsersLogic\\Nullean.OnlineStore.UsersLogic.csproj"
             }
           }
         }

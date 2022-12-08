@@ -1,17 +1,11 @@
 ﻿using Nullean.OnlineStore.DalInterfaceUsers;
 using Nullean.OnlineStore.EFContext;
 using Nullean.OnlineStore.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 using UserModel = Nullean.OnlineStore.Entities.User;
 using OrderModel = Nullean.OnlineStore.Entities.Order;
 using ProductModel = Nullean.OnlineStore.Entities.Product;
-using Nullean.OnlineStore.EFContext.EfEntities;
-using Microsoft.EntityFrameworkCore;
 
 namespace Nullean.OnlineStore.UserDaoEF
 {
